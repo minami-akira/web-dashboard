@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-display: swap;
+  src: url("../../public/assets/fonts/Poppins-Regular.ttf");
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  overflow: hidden;
+}
+
+.list-scrollbar::-webkit-scrollbar {
+  display: block;
+  width: 7px;
+  height: 7px;
+}
+
+.list-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.list-scrollbar::-webkit-scrollbar-thumb {
+  background: #8782b1;
+  border-right: none;
+  border-left: none;
+  border-radius: 10px;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
